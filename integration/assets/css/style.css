@@ -1,0 +1,187 @@
+/* FONT */
+@font-face {
+    font-family: 'font-space-custom';
+    src: url(./font/nasalization-rg.otf);
+}
+
+/* Variables */
+
+
+:root{
+    --font-main-title: 'font-space-custom';
+    --font-main-nav: 'font-space-custom';
+    --font-content: 'Cambria, Cochin, Georgia, Times, 'Times New Roman', serif';
+    --color-background-nav-mobile: rgb(214, 115, 115);
+    --color-font-nav-mobile: rgb(0, 0, 0);
+    --color-font-article-header-title:rgb(255,255,255);
+    --background-color-header-article-card: rgb(152, 152, 152);
+    --color-font-links: rgb(0,0,0);
+}
+/* GLOBAL */
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-main-title);
+}
+    /* HEADER */
+body header {
+    margin: 1em 0;
+}
+body header section{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TITLE */
+body header section h1{
+    margin-left: 1em;
+    font-size: 1em;
+    font-family:var(--font-main-title);
+}
+
+/* NAV */
+body header section div{
+    margin-right: 1em;
+    width: 22px;
+    height: 4px;
+    position: relative;
+    background-color: black;
+    border-radius: 12px;
+    top: 10px;
+}
+
+/* ! Burger Menu with close class */
+body header section.nav div.nav_burger::before, div.nav_burger::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    border-radius: 12px;
+}
+body header section.nav div.nav_burger::after{
+    top: 6px;
+  
+}
+body header section.nav div.nav_burger::before{
+    bottom : 6px;
+    
+}
+
+body header section.nav nav{
+    display: none;
+}
+
+/* ! Burger Menu with open class */
+body header section.open div{
+    background-color: transparent;
+    top: 0;
+}
+body header section.open div.nav_burger::before, div.nav_burger::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    border-radius: 12px;
+
+}
+body header section.open div.nav_burger::after{
+    top: 10px;
+    transform: rotate(45deg);
+}
+body header section.open div.nav_burger::before{
+    top: 10px;
+    transform: rotate(-45deg);
+}
+body header section.open nav{
+    display: block;
+}
+
+body header section nav{
+    width: 100%;
+    text-align: center;
+    background-color: var( --color-background-nav-mobile);
+    position: absolute;
+    top: 50px;
+}
+body header section nav ul{
+    list-style: none;
+    padding: 0;
+    font-family: var(--font-main-nav);
+    font-size: 1em;
+}
+body header section nav ul li{
+    margin: 1em 0;
+}
+body header section nav ul li a{
+    text-decoration: none;
+    color: var(--color-font-nav-mobile);
+}
+
+/* Main */
+main h2{
+
+    text-align: center;
+    width: 100%;
+}
+main p{
+    margin-top: 1em;
+    text-align:center;
+    font-size: 0.75em;
+    padding: 0 1.2em;
+    font-family: var(--font-content);
+    font-weight: 600;
+}
+
+/* Articles */
+main section.articles{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 1em 0;
+    gap: 5px;
+}
+main section.articles article{
+    width: 95%;
+    border: 2px solid lightgray;
+    border-radius: 2px;
+
+}
+main section.articles article header{
+    width: 100%;
+    margin: 0;
+    padding: 0.3em;
+    background-color: var(--background-color-header-article-card);
+}
+main section.articles article header a{
+    text-decoration: none;
+    font-family: var(--font-main-title);
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    color: var(--color-font-article-header-title);
+}
+main section.articles article main p{
+    text-align: justify;
+    line-height: 1.2em;
+    margin-bottom: 0.5em;
+}
+main section.articles article footer a{
+    text-decoration: none;
+    font-family: var(--font-content);
+    font-weight: 600;
+    color: var(--color-font-links);
+    margin-left: 0.9em;
+    font-size: 0.8em;
+}
+
+main div.paging{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+main div.paging a{
+    font-size: 0.9em;
+    font-family: var(--font-content);
+    font-weight: 600;
+    text-underline-offset: 0.2em;
+}
