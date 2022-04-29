@@ -176,6 +176,10 @@ main section.articles article header a{
     color: var(--color-font-article-header-title);
     
 }
+main section.articles article main a{   
+    text-decoration: none;
+    color: black;
+}
 main section.articles article main p{
     text-align: justify;
     line-height: 1.2em;
@@ -184,15 +188,40 @@ main section.articles article main p{
     font-family: var(--font-content);
     
 }
-main section.articles article footer a{
-    text-decoration: none;
-    font-family: var(--font-content);
-    font-weight: 600;
-    color: var(--color-font-links);
-    margin-left: 0.9em;
-    font-size: 0.8em;
-    
+main section.articles article footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.4em 1em;
+    align-items: flex-end;
+    font-family:var(--font-main-title);
 }
+main section.articles article footer time{
+    font-size: 0.7em;
+}
+main section.articles article footer a.author{
+    text-decoration: none;
+}
+main section.articles article footer a.author div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: black;
+}
+main section.articles article footer div.category{
+    display: flex;
+    gap: 10px;
+}
+main section.articles article footer div.category a{
+    text-decoration: none;
+    background-color: lightblue;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: black;
+    border-radius: 4px;
+}
+
 
 main div.paging{
     display: flex;

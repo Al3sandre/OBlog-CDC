@@ -79,7 +79,6 @@ En français uniquement.
 - Un menu avec :
   - Titre/logo
   - Liens vers les catégories
-- Une image d'en-tête avec titre + slogan (baseline)
 - "Sidebar" à droite qui regroupe :
   - Champ de recherche
   - Liste des catégories
