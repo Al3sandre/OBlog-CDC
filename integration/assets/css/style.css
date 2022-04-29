@@ -11,22 +11,27 @@
     --font-main-title: 'font-space-custom';
     --font-main-nav: 'font-space-custom';
     --font-content: 'Cambria, Cochin, Georgia, Times, 'Times New Roman', serif';
-    --color-background-nav-mobile: rgb(214, 115, 115);
-    --color-font-nav-mobile: rgb(0, 0, 0);
-    --color-font-article-header-title:rgb(255,255,255);
+    --color-background-nav-mobile: rgb(49, 48, 48);
     --background-color-header-article-card: rgb(152, 152, 152);
     --background-color-button-search: rgb(142, 108, 200);
+    --color-font-nav-mobile: rgb(255, 255, 255);
+    --color-font-article-header-title:rgb(255,255,255);
     --color-font-links: rgb(0,0,0);
     --color-font-button-search:rgb(255, 255, 255);
-    --color-font-aside: rgb(0,0,0);
+    --color-font-aside: rgb(255, 255, 255);
 }
 /* GLOBAL */
 h1,h2,h3,h4,h5,h6{
     font-family: var(--font-main-title);
 }
+body{
+
+    background-image: url(../img/Background.jpg);
+}
     /* HEADER */
 body header {
     margin: 1em 0;
+    
 }
 body header section{
     display: flex;
@@ -38,6 +43,7 @@ body header section h1{
     margin-left: 1em;
     font-size: 1em;
     font-family:var(--font-main-title);
+    color: var(--color-font-nav-mobile);
 }
 
 /* NAV */
@@ -46,7 +52,7 @@ body header section div{
     width: 22px;
     height: 4px;
     position: relative;
-    background-color: black;
+    background-color: white;
     border-radius: 12px;
     top: 10px;
 }
@@ -54,7 +60,7 @@ body header section div{
 /* ! Burger Menu with close class */
 body header section.nav div.nav_burger::before, div.nav_burger::after{
     content: "";
-    background-color: black;
+    background-color: white;
     position: absolute;
     width: 22px;
     height: 4px;
@@ -80,7 +86,7 @@ body header section.open div{
 }
 body header section.open div.nav_burger::before, div.nav_burger::after{
     content: "";
-    background-color: black;
+    background-color: white;
     position: absolute;
     width: 22px;
     height: 4px;
@@ -102,7 +108,7 @@ body header section.open nav{
 body header section nav{
     width: 100%;
     text-align: center;
-    background-color: var( --color-background-nav-mobile);
+    background-image: url(../img/Background.jpg);
     position: absolute;
     top: 50px;
 }
@@ -123,6 +129,8 @@ header h2{
 
     text-align: center;
     width: 100%;
+    margin-top: 1em;
+    color: var(--color-font-nav-mobile);
 }
 header p{
     margin-top: 1em;
@@ -130,6 +138,7 @@ header p{
     font-size: 0.75em;
     padding: 0 1.2em;
     font-family: var(--font-content);
+    color: var(--color-font-nav-mobile);
     font-weight: 600;
 }
 
@@ -145,8 +154,11 @@ main section.articles{
 }
 main section.articles article{
     width: 95%;
-    border: 2px solid lightgray;
+    border: 2px solid aliceblue;
     border-radius: 2px;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px 1px  aliceblue;
+    margin-top: 1em;
 
 }
 main section.articles article header{
@@ -154,6 +166,7 @@ main section.articles article header{
     margin: 0;
     padding: 0.3em;
     background-color: var(--background-color-header-article-card);
+    
 }
 main section.articles article header a{
     text-decoration: none;
@@ -161,6 +174,7 @@ main section.articles article header a{
     font-size: 1.2em;
     margin-left: 0.5em;
     color: var(--color-font-article-header-title);
+    
 }
 main section.articles article main p{
     text-align: justify;
@@ -168,6 +182,7 @@ main section.articles article main p{
     margin-bottom: 0.5em;
     padding: 1em;
     font-family: var(--font-content);
+    
 }
 main section.articles article footer a{
     text-decoration: none;
@@ -176,6 +191,7 @@ main section.articles article footer a{
     color: var(--color-font-links);
     margin-left: 0.9em;
     font-size: 0.8em;
+    
 }
 
 main div.paging{
@@ -189,6 +205,7 @@ main div.paging a{
     font-family: var(--font-content);
     font-weight: 600;
     text-underline-offset: 0.2em;
+    color: var(--color-font-nav-mobile);
 }
 
 /* ASIDE */
@@ -219,6 +236,10 @@ aside section{
     border-radius: 4px;
     padding: 1em;
 }
+aside section h3{
+    color: var(--color-font-nav-mobile);
+    font-size: 1.2em;
+}
 aside section ul{
     list-style: none;
     padding: 0;
@@ -248,7 +269,7 @@ footer section.social__links{
 }
 footer section.social__links a{
     text-decoration: none;
-    color: grey;
+    color: var(--color-font-nav-mobile);
 }
 footer section.nav__footer{
     margin-top: 1em;
@@ -262,6 +283,13 @@ footer section.nav__footer nav ul{
     padding: 0;
     text-align: center;
 }
+footer section.nav__footer nav ul li a{
+    color: var(--color-font-nav-mobile);
+}
+#earth, #fuse, #satelite{
+    display: none;
+}
+
 
 /* TABLET */
 @media (min-width: 750px){
@@ -319,6 +347,9 @@ footer section.nav__footer nav ul{
     header{
         grid-area: 1 / 1 / 2 / 4;
     }
+    header p{
+        font-size: 1em;
+    }
     main{
         grid-area: 2 / 2 / 3 / 3;
         min-width: 100%;
@@ -332,10 +363,37 @@ footer section.nav__footer nav ul{
         margin-top:1em ;
     }
     #site-search{
-        min-width: 0%;
+        min-width: 62%;
+    }
+    aside section{
+        width: 90%;
+        justify-self: center;
+        padding: 0.5em;
+        margin-top: 0.5em;
     }
     footer{
         grid-area: 3 / 1 / 4 / 4;
         margin-top: 3em;
     }
+    #earth{
+        display: block;
+        position: relative;
+        top: -100px;
+    }
+    #fuse{
+        display: block;
+        position: relative;
+        bottom: 90px;
+        width: 150px;
+        transform: rotate(5deg);
+    }
+    #satelite{
+        display: block;
+        position: absolute;
+        right: 175px;
+        top: 650px;
+        width: 15%;
+        transform: rotate(15deg);
+    }
+
 }
