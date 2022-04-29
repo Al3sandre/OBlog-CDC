@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/font/icofont/icofont.min.css">
     <script src="./assets/js/app.js" defer type="module"></script>
     <title>A la dérive</title>
 </head>
 <body>
     <header>
         <section class="nav ">
-            <h1>A la dérive</h1>
+            <h1>A la dérive</ion-icon></h1>
             <div class="nav_burger"></div>
             <nav>
                 <ul>
@@ -22,10 +23,10 @@
                 </ul>
             </nav>
         </section>
-    </header>
-    <main>
         <h2>A la dérive</h2>
         <p>Un blog collaboratif de developpeurs web dérivant délibérément au milieu de l'espace</p>
+    </header>
+    <main>
         <section class="articles">
             <article>
                 <header> <a href="#"> Article Title </a></header>
@@ -76,6 +77,11 @@
         </div>
     </main>
     <aside>
+        <div class="search__bar">
+            <label for="site-search"></label>
+            <input type="search" id="site-search" name="search">
+            <button>Search</button>
+        </div>
         <section class="categories">
             <h3>Catégories</h3>
             <ul>
@@ -86,15 +92,32 @@
             </ul>
         </section>
         <section class="author">
-            <h3>Auteurs</h3>
+            <h3>Auteurs</h3> 
             <ul>
                 <li><a href="#">Maxime</a></li>
                 <li><a href="#">Dario</a></li>
                 <li><a href="#">Lucie</a></li>
                 <li><a href="#">Anthony</a></li>
+               
             </ul>
         </section>
     </aside>
-    <footer></footer>
+    <footer>
+        <section class="social__links">
+            <a href="#"><i class="icofont-facebook"></i></a>
+            <a href="#"><i class="icofont-twitter"></i></a>
+            <a href="#"><i class="icofont-linkedin"></i></a>
+            <a href="#"><i class="icofont-share"></i></a>
+        </section>
+        <section class="nav__footer">
+            <nav>
+                <ul>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">Qui somme-nous ?</a></li>
+                    <li><a href="#">Mention légales</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
 </body>
 </html>
